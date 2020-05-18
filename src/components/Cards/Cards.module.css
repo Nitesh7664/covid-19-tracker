@@ -1,0 +1,33 @@
+.container {
+  padding: 3em;
+  margin: 3em;
+  display: flex;
+  width: 90%;
+}
+.card {
+  height: 200px;
+  width: 200px;
+  padding: 1em;
+}
+.card_title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 1em;
+}
+.card_subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.card_count {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.card_confirmed {
+  border-bottom: 10px solid blue;
+}
+.card_recoverd {
+  border-bottom: 10px solid green;
+}
+.card_deaths {
+  border-bottom: 10px solid red;
+}
