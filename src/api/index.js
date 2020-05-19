@@ -8,7 +8,6 @@ export const fetchData = async (country) => {
     if (country) {
       modifiedUrl = `${url}/countries/${country}`;
     }
-    console.log(modifiedUrl);
     const { data } = await axios.get(modifiedUrl);
 
     const modifiedData = {
