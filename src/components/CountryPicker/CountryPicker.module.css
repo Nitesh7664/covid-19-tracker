@@ -1,0 +1,17 @@
+.container {
+  width: 90%;
+  padding: 3em;
+  margin: 0 auto;
+  margin-bottom: 5em;
+  background-color: lightgrey;
+}
+.select_box {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  border-bottom: 2px solid lightslategray;
+  width: 95%;
+  max-width: 500px;
+  text-align: center;
+}

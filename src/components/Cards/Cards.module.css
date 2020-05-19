@@ -2,12 +2,14 @@
   padding: 3em;
   margin: 3em;
   display: flex;
-  width: 90%;
+  justify-content: space-around;
+  background: aquamarine;
 }
 .card {
   height: 200px;
-  width: 200px;
-  padding: 1em;
+  min-width: 200px;
+  padding: 3em;
+  text-align: center;
 }
 .card_title {
   font-size: 1.25rem;
@@ -23,11 +25,23 @@
   font-weight: 900;
 }
 .card_confirmed {
+  background: skyblue;
   border-bottom: 10px solid blue;
 }
-.card_recoverd {
+.card_recovered {
+  background: yellowgreen;
   border-bottom: 10px solid green;
 }
 .card_deaths {
+  background: lightcoral;
   border-bottom: 10px solid red;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .card {
+    margin-top: 1em;
+  }
 }

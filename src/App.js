@@ -8,23 +8,30 @@ import styles from "./app.module.css";
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      data: undefined,
+      country: "",
+    };
   }
   async componentDidMount() {
-    const data = await fetchData();
-    this.setState({ data });
-    console.log(this.state.data);
+    const fetchedData = await fetchData();
+    this.setState({ data: fetchedData });
   }
 
-  render() {
-    const { data } = this.state;
-    console.log(data);
+  handleCountryChange = async (country) => {
+    const fetchedData = await fetchData(country);
+    console.log(fetchedData);
+    this.setState({ data: fetchedData, country: country });
+  };
 
+  render() {
+    const { data, country } = this.state;
+    console.log(country);
     return (
       <div className={styles.container}>
         <h1>Covid-19 tracker</h1>
         <Cards data={data} />
-        <CountryPicker />
+        <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Chart />
       </div>
     );
