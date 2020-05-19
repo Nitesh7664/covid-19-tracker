@@ -31,3 +31,21 @@ export const fetchCountries = async () => {
     console.log(err);
   }
 };
+
+export const fetchDailyData = async () => {
+  try {
+    const { data } = await axios.get(`${url}/daily`);
+
+    const modifiedData = data.map((data, i) => {
+      return {
+        confirmed: data.confirmed.total,
+        deaths: data.deaths.total,
+        date: data.reportDate,
+      };
+    });
+
+    return modifiedData;
+  } catch (err) {
+    console.log(err);
+  }
+};
