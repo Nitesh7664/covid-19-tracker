@@ -1,9 +1,8 @@
 .container {
   width: 90%;
-  padding: 3em;
+  padding: 2em;
   margin: 0 auto;
   margin-bottom: 5em;
-  background-color: lightgrey;
 }
 .select_box {
   background: none;
@@ -14,4 +13,5 @@
   width: 95%;
   max-width: 500px;
   text-align: center;
+  margin-top: 1em;
 }

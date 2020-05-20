@@ -1,6 +1,5 @@
 .container {
-  padding: 1em;
-  background: lightgray;
+  padding: 0.5em;
   width: 90%;
   margin: 0 auto;
 }
@@ -8,8 +7,11 @@
   display: block;
   width: 100px;
   height: 100px;
-  margin: 1em auto;
+  margin: 0 auto;
 }
 .primary {
   color: rgba(0, 0, 255, 0.5);
+}
+.success {
+  color: rgba(0, 128, 0, 0.8);
 }
