@@ -1,0 +1,15 @@
+.container {
+  padding: 1em;
+  background: lightgray;
+  width: 90%;
+  margin: 0 auto;
+}
+.image {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 1em auto;
+}
+.primary {
+  color: rgba(0, 0, 255, 0.5);
+}
