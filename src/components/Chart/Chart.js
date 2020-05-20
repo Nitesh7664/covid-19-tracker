@@ -12,7 +12,6 @@ function Chart({ data, country }) {
       setDailyData(await fetchDailyData());
     };
 
-    console.log(dailyData);
     fetchData();
   }, [setDailyData]);
 
