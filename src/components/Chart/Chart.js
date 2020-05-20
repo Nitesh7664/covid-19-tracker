@@ -7,8 +7,6 @@ import styles from "./Chart.module.css";
 function Chart({ data, country }) {
   const [dailyData, setDailyData] = useState([]);
 
-  const { confirmed, recovered, deaths } = data;
-
   useEffect(() => {
     const fetchData = async () => {
       setDailyData(await fetchDailyData());
@@ -41,10 +39,10 @@ function Chart({ data, country }) {
     />
   ) : null;
 
-  const BarChart = confirmed ? (
+  const BarChart = data ? (
     <Bar
       data={{
-        label: ["Infected", "Recovered", "Deaths"],
+        labels: ["Infected", "Recovered", "Deaths"],
         datasets: [
           {
             label: "People",
@@ -53,7 +51,11 @@ function Chart({ data, country }) {
               "rgba(0, 255, 0, 0.5)",
               "rgba(255, 0, 0, 0.5)",
             ],
-            data: [confirmed.value, recovered.value, deaths.value],
+            data: [
+              data.confirmed.value,
+              data.recovered.value,
+              data.deaths.value,
+            ],
           },
         ],
       }}
@@ -66,12 +68,7 @@ function Chart({ data, country }) {
 
   const output = country ? BarChart : LineChart;
 
-  return (
-    <div className={styles.container}>
-      <h1>Chart</h1>
-      {output}
-    </div>
-  );
+  return <div className={styles.container}>{output}</div>;
 }
 
 export default Chart;

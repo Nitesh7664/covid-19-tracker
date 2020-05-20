@@ -30,7 +30,7 @@ class App extends React.Component {
         <h1>Covid-19 tracker</h1>
         <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Chart />
+        <Chart data={data} country={country} />
       </div>
     );
   }

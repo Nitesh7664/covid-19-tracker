@@ -24,7 +24,7 @@ function CountryPicker({ handleCountryChange }) {
         onChange={(e) => handleCountryChange(e.target.value)}
         className={styles.select_box}
       >
-        <option value="Global">Global</option>
+        <option value="">Global</option>
         {countries.map((country, i) => (
           <option key={i} value={country.name}>
             {country.name}
